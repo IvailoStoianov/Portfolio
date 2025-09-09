@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --sourcemap --outfile=public/assets/script.js",
+    "dev": "esbuild src/main.ts --bundle --sourcemap --outfile=public/assets/script.js --watch",
+    "clean": "powershell -NoProfile -Command \"Remove-Item -Recurse -Force script.js,script.js.map -ErrorAction SilentlyContinue\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "maplibre-gl": "^5.7.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.2"
+  }
+}

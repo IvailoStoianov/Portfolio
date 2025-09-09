@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ivailo S.</title>
+    <meta name="description" content="A simple site with an animated night sky background.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="nav" role="navigation">
+      <div class="nav-inner">
+        <a class="brand" href="index.html">Ivailo <span>Stoianov</span></a>
+        <nav class="links" aria-label="Primary">
+          <a href="blog.html">blog</a>
+          <a href="projects.html">projects</a>
+          <a href="bookshelf.html">bookshelf</a>
+        </nav>
+      </div>
+    </header>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <section class="section hero">
+      <div class="wrap">
+        <div class="hero-card">
+          <div class="map-wrap">
+            <div id="map" class="map" aria-label="Map showing Sofia, Bulgaria"></div>
+            <div class="time-badge">Local time</div>
+          </div>
+          <div class="hero-body">
+            <img class="avatar" src="https://placehold.co/72x72" width="72" height="72" alt="Profile photo placeholder">
+            <div class="title">
+              <h1>Hey, I'm Ivailo Stoianov <span class="wave">👋</span></h1>
+              <p class="avail"><span class="dot"></span>Available for work</p>
+            </div>
+            <p class="lead">
+              Full‑stack and backend developer focused on .NET and cloud. I build reliable APIs,
+              data‑driven services, and pragmatic UIs with clean, maintainable code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section tech">
+      <div class="wrap">
+        <ul class="tech-grid" aria-label="Technologies">
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/asp.net-core-icon.png" alt="ASP.NET Core icon" /></div>
+            <div class="tech-name">ASP.NET Core</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/entity-framework-icon.png" alt="Entity Framework icon" /></div>
+            <div class="tech-name">Entity Framework</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/azure-icon.png" alt="Azure icon" /></div>
+            <div class="tech-name">Azure</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/html-icon.png" alt="HTML icon" /></div>
+            <div class="tech-name">HTML</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/css-icon.png" alt="CSS icon" /></div>
+            <div class="tech-name">CSS</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/js-icon.png" alt="JavaScript icon" /></div>
+            <div class="tech-name">JavaScript</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/sql-icon.png" alt="SQL icon" /></div>
+            <div class="tech-name">SQL</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/docker-icon.png" alt="Docker icon" /></div>
+            <div class="tech-name">Docker</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/python-icon.png" alt="Python icon" /></div>
+            <div class="tech-name">Python</div>
+          </li>
+          <li class="tech-card">
+            <div class="tech-icon" aria-hidden="true"><img src="assets/tech_icons/lua-icon.png" alt="Lua icon" /></div>
+            <div class="tech-name">Lua</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <script src="assets/script.js"></script>
+  </body>
+  </html>
+
+
