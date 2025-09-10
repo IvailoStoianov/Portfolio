@@ -20839,6 +20839,7 @@ ${n2.shaderPreludeCode.vertexSource}`, define: n2.shaderDefine }, defaultProject
       canvas.height = Math.floor(height * dpr);
       canvas.style.width = width + "px";
       canvas.style.height = height + "px";
+      canvas.style.transform = "";
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
       initParticles();
@@ -20883,7 +20884,13 @@ ${n2.shaderPreludeCode.vertexSource}`, define: n2.shaderDefine }, defaultProject
     function step(now) {
       const dt = Math.min(0.033, (now - lastTime) / 1e3);
       lastTime = now;
-      ctx.clearRect(0, 0, width, height);
+      // Paint a stable gradient background directly on the canvas to avoid
+      // any seams/gaps from underlying CSS backgrounds.
+      const bg = ctx.createRadialGradient(width * 0.7, height * 0.2, 0, width * 0.7, height * 0.2, Math.max(width, height) * 1.2);
+      bg.addColorStop(0, "#020617");
+      bg.addColorStop(1, "#00010a");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, width, height);
       parallax.x += (parallax.tx - parallax.x) * 0.06;
       parallax.y += (parallax.ty - parallax.y) * 0.06;
       for (let i = 0; i < particles.length; i++) {
